@@ -104,8 +104,8 @@ resources:
               #!/bin/bash
               sudo mkdir /home/labs
               cd /home/labs
-              sudo git clone https://github.com/ISIS2503/ISIS2503-Microservices-AppDjango.git
-              cd ISIS2503-Microservices-AppDjango
+              sudo git clone https://github.com/alejandroP03/monitoring_app.git
+              cd monitoring_app
               docker network create kong-net
               docker run -d --name kong --network=kong-net --restart=always \
               -v "$(pwd):/kong/declarative/" -e "KONG_DATABASE=off" \
@@ -226,8 +226,8 @@ resources:
               #!/bin/bash
               sudo mkdir /home/labs
               cd /home/labs
-              sudo git clone https://github.com/ISIS2503/ISIS2503-Microservices-AppDjango.git
-              cd ISIS2503-Microservices-AppDjango/variables
+              sudo git clone https://github.com/alejandroP03/monitoring_app.git
+              cd monitoring_app/variables
 
   - name: msd-measurements-ms
     type: compute.v1.instance
@@ -259,8 +259,8 @@ resources:
               sudo apt install python3-pip -y
               sudo mkdir /home/labs
               cd /home/labs
-              sudo git clone https://github.com/ISIS2503/ISIS2503-Microservices-AppDjango.git
-              cd ISIS2503-Microservices-AppDjango/measurements
+              sudo git clone https://github.com/alejandroP03/monitoring_app.git
+              cd monitoring_app/measurements
               sudo pip3 install -r requirements.txt
               sudo python3 manage.py makemigrations
               sudo python3 manage.py migrate
@@ -295,8 +295,8 @@ resources:
               sudo apt install python3-pip -y
               sudo mkdir /home/labs
               cd /home/labs
-              sudo git clone https://github.com/ISIS2503/ISIS2503-Microservices-AppDjango.git
-              cd ISIS2503-Microservices-AppDjango/places
+              sudo git clone https://github.com/alejandroP03/monitoring_app.git
+              cd monitoring_app/places
               sudo pip3 install -r requirements.txt
               sudo python3 manage.py makemigrations
               sudo python3 manage.py migrate
