@@ -23,8 +23,8 @@ def list_places(request):
     return JsonResponse(list(places.values()), safe=False)
 
 
-def get_place(request, place_id):
-    place = Place.objects.get(id=place_id)
+def get_place(request, place_name):
+    place = Place.objects.get(name=place_name)
     if place is None:
         return JsonResponse({})
     return JsonResponse({"id": place.id, "name": place.name})
